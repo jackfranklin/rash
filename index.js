@@ -1,11 +1,14 @@
 var Rash = function(obj) {
   if(this instanceof Rash) {
-    this.obj = obj;
+    this.obj = obj || {};
+    this._default = undefined;
   } else {
     return new Rash(obj)
   }
 };
 
-require('lib/assoc')(Rash);
+['assoc', 'clear', 'default'].forEach(function(a) {
+  require('./lib/' + a)(Rash);
+});
 
 module.exports = Rash;

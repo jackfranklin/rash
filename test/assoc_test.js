@@ -1,8 +1,15 @@
 var expect = require('expect.js');
-var Hash = require('../index');
+var Rash = require('../index');
 
-describe('Hash#assoc', function() {
-  it('can be instantiated without new', function() {
-    expect(Hash({})).to.be.a(Hash);
+describe('Rash#assoc', function() {
+  it('returns the two len array', function() {
+    var h = {
+      'letters': ['a', 'b', 'c']
+    };
+    expect(Rash(h).assoc('letters')).to.eql(['letters', ['a', 'b', 'c']]);
+  });
+
+  it('returns undefined if no key', function() {
+    expect(Rash({}).assoc('foo')).to.eql(undefined);
   });
 });
