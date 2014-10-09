@@ -7,12 +7,12 @@
     "test": "mocha test",
     "lint": "jshint --exclude 'node_modules/*' .",
     "full_test": "npm run lint && npm test"
-
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "expect.js": "^0.3.1",
+    "jshint": "^2.5.6",
     "mocha": "^1.21.4"
   }
 }
