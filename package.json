@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
-    "lint": "jshint --exclude 'node_modules/*' ."
+    "lint": "jshint --exclude 'node_modules/*' .",
+    "full_test": "npm run lint && npm test"
+
   },
   "author": "",
   "license": "ISC",
