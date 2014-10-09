@@ -7,7 +7,12 @@ var Rash = function(obj) {
   }
 };
 
-['assoc', 'clear', 'default'].forEach(function(a) {
+['assoc',
+  'clear',
+  'default',
+  'delete',
+  'delete_if'
+].forEach(function(a) {
   require('./lib/' + a)(Rash);
 });
 
