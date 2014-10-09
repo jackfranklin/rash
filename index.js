@@ -12,7 +12,8 @@ var Rash = function(obj) {
   'default',
   'delete',
   'delete_if',
-  'fetch'
+  'fetch',
+  'flatten'
 ].forEach(function(a) {
   require('./lib/' + a)(Rash);
 });
