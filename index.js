@@ -3,7 +3,7 @@ var Rash = function(obj) {
     this.obj = obj || {};
     this._default = undefined;
   } else {
-    return new Rash(obj)
+    return new Rash(obj);
   }
 };
 
