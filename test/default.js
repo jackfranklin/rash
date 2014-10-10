@@ -11,4 +11,9 @@ describe('Rash#default', function() {
     r.default('foo');
     expect(r.assoc('blah')).to.eql('foo');
   });
+
+  it('returns the default when set', function() {
+    var r = new Rash();
+    expect(r.default('foo')).to.eql('foo');
+  });
 });
