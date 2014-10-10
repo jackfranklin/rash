@@ -4,8 +4,12 @@ var Rash = require('../index');
 describe('Rash#fetch', function() {
   it('returns the item if it exists', function() {
     var h = { a: 2, b: 3 };
-    var r = Rash(h);
     expect(Rash(h).fetch('a')).to.eql(2);
+  });
+
+  it('works with falsey vals', function() {
+    var h = { a: 0 };
+    expect(Rash(h).fetch('a')).to.eql(0);
   });
 
   it('calls the fn if the key does not exist', function() {
