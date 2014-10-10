@@ -5,10 +5,10 @@ A WIP experiment to implement all Ruby`s Hash methods on JS objects.
   - `clear`
   - `default`
   - `delete`
-  - `delete_if`
+  - `deleteIf`
   - `fetch`
   - `flatten`
-  - `keep_if`
+  - `keepIf`
   - `key`
 
 # Usage
