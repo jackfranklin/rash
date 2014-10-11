@@ -15,9 +15,18 @@ var Rash = function(obj) {
   'fetch',
   'flatten',
   'keep_if',
-  'key'
+  'key',
+  'merge'
 ].forEach(function(a) {
   require('./lib/' + a)(Rash);
 });
+
+var ALIASES = {
+  'keepIf': 'select'
+}
+
+for(var key in ALIASES) {
+  Rash.prototype[ALIASES[key]] = Rash.prototype[key];
+}
 
 module.exports = Rash;
