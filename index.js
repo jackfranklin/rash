@@ -16,7 +16,8 @@ var Rash = function(obj) {
   'flatten',
   'keep_if',
   'key',
-  'merge'
+  'merge',
+  'select'
 ].forEach(function(a) {
   require('./lib/' + a)(Rash);
 });
