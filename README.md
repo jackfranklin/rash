@@ -11,6 +11,8 @@ Ruby's hash methods on JS objects.
   - `flatten`
   - `keepIf`
   - `key`
+  - `merge` and `mergeBang`
+  - `select` and `selectBang`
 
 # Usage
 
