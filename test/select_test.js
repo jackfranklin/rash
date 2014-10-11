@@ -24,3 +24,15 @@ describe('Rash#select', function() {
     expect(r.obj).to.eql({ a: 2, b: 3 });
   });
 });
+
+describe('Rash#selectBang', function() {
+  it('modifies in place', function() {
+    var r = Rash({ a: 2, b: 3 });
+
+    r.selectBang(function(k, v) {
+      return k == 'a';
+    });
+
+    expect(r.obj).to.eql({ a: 2 });
+  });
+});
