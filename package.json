@@ -1,14 +1,14 @@
 {
   "name": "rash",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Ruby hash methods on JS objects",
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
     "lint": "jshint --exclude 'node_modules/*' .",
     "full_test": "npm run lint && npm test"
   },
-  "author": "",
+  "author": "Jack Franklin",
   "license": "ISC",
   "devDependencies": {
     "expect.js": "^0.3.1",
