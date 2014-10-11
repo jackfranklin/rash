@@ -9,6 +9,13 @@ describe('Rash#delete', function() {
     expect(r.obj).to.eql({ b: 3 });
   });
 
+  it('modifies the original object', function() {
+    var h = { a: 2, b: 3 };
+    var r = Rash(h);
+    r.delete('a');
+    expect(r.obj).to.eql({ b: 3 });
+  });
+
   it('returns _default if the item does not exist', function() {
     var h = { a: 2 };
     expect(Rash(h).delete('b')).to.eql(undefined);

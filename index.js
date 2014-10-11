@@ -21,12 +21,4 @@ var Rash = function(obj) {
   require('./lib/' + a)(Rash);
 });
 
-var ALIASES = {
-  'keepIf': 'select'
-}
-
-for(var key in ALIASES) {
-  Rash.prototype[ALIASES[key]] = Rash.prototype[key];
-}
-
 module.exports = Rash;

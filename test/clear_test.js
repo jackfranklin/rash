@@ -6,6 +6,6 @@ describe('Rash#clear', function() {
     var h = {
       'letters': ['a', 'b', 'c']
     };
-    expect(Rash(h).clear()).to.eql({});
+    expect(Rash(h).clear().obj).to.eql({});
   });
 });

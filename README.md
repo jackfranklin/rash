@@ -1,4 +1,5 @@
-A WIP experiment to implement all Ruby`s Hash methods on JS objects.
+# Rash
+Ruby's hash methods on JS objects.
 
 # Current Methods Implemented
   - `assoc`
@@ -19,11 +20,19 @@ var rashedObject = Rash(regularObject);
 var notA = rashedObject.deleteIf(function(key, val) {
     return key == 'a';
 });
-console.log(notA) // { b: 2 }
+// notA is a Rash instance
+console.log(notA.obj) // { b: 2 }
 ```
 
-It is important to note that methods on a `Rash` object __return a plain JS object__. This means that Rash calls cannot be chained.
+Methods that return the modified hash, or a brand new hash, will always return a __Rash object__. This means you can chain the calls really nicely. Methods that return a particular key or individual value will not return them wrapped in `Rash`. __Only methods that return an object will return a Rash instance__.
+
+To access the plain JS object, just access the `obj` property.
 
 # Contributions
 
 Welcome! Just pick a Hash method that hasn't been implemented yet and do it, or improve an existing implementation.
+
+# Changelog
+
+## 0.0.1
+- initial release

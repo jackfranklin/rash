@@ -7,6 +7,6 @@ describe('Rash#deleteIf', function() {
     var r = Rash(h);
     expect(r.deleteIf(function(k, v) {
       return k == 'a';
-    })).to.eql({ b: 3 });
+    }).obj).to.eql({ b: 3 });
   });
 });

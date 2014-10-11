@@ -5,8 +5,11 @@ describe('Rash#keepIf', function() {
   it('keeps those that match', function() {
     var h = { a: 2, b: 3 };
     var r = Rash(h);
-    expect(r.keepIf(function(k, v) {
+
+    r.keepIf(function(k, v) {
       return k == 'a';
-    })).to.eql({ a: 2 });
+    });
+
+    expect(r.obj).to.eql({ a: 2 });
   });
 });
